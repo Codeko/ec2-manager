@@ -13,8 +13,14 @@ EC2 allows users to have machines on which they can run their own projects
 3. cd name´s-proyect
 ### Clone the repository
 4. git clone https://github.com/Codeko/ec2-manager.git
+### Run mysql
+5. /etc/init.d/mysql start
+### Login database
+6. mysql -u root -p
+### Create database
+7. CREATE DATABASE name´s-proyect
 ### Start the server
-5. php artisan serve
+7. php artisan serve
 
 ### To access the administration panel
 http://127.0.0.1:8000/admin
