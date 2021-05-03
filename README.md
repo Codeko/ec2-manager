@@ -25,7 +25,7 @@ EC2 allows users to have machines on which they can run their own projects
 ### Create database
 10. CREATE DATABASE name´s database;
 11. EXIT; 
-### modify DB_PASSWORD and DB_DATABSE in .env file adding the password you created when creating the user in step 7 and and mysql password
+### modify DB_PASSWORD and DB_DATABSE in .env file adding the password you created when creating the user in step 7 and mysql password
 12. DB_PASSWORD= PASSWORD
 13. BD_DATABASE= name´s database
 ### give user permission
