@@ -15,6 +15,8 @@ use App\Orchid\Screens\Role\RoleListScreen;
 use App\Orchid\Screens\User\UserEditScreen;
 use App\Orchid\Screens\User\UserListScreen;
 use App\Orchid\Screens\User\UserProfileScreen;
+use App\Orchid\Screens\ProjectEditScreen;
+use App\Orchid\Screens\ProjectListScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
 
@@ -108,3 +110,10 @@ Route::screen('example-cards', ExampleCardsScreen::class)->name('platform.exampl
 Route::screen('example-advanced', ExampleFieldsAdvancedScreen::class)->name('platform.example.advanced');
 
 //Route::screen('idea', 'Idea::class','platform.screens.idea');
+
+//Screens for project
+Route::screen('project/{project?}', ProjectEditScreen::class)
+    ->name('platform.project.edit');
+
+Route::screen('projects', ProjectListScreen::class)
+    ->name('platform.project.list');
