@@ -19,6 +19,9 @@ use App\Orchid\Screens\ProjectEditScreen;
 use App\Orchid\Screens\ProjectListScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
+use App\Orchid\Screens\MachineEditScreen;
+use App\Orchid\Screens\MachineListScreen;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -101,6 +104,14 @@ Route::screen('example', ExampleScreen::class)
             ->parent('platform.index')
             ->push(__('Example screen'));
     });
+
+//Platform > Machine > Edit
+Route::screen('machine/{machine?}', MachineEditScreen::class)
+    ->name('platform.machine.edit');
+
+//Platform > Machine > List
+Route::screen('machines', MachineListScreen::class)
+    ->name('platform.machine.list');
 
 Route::screen('example-fields', ExampleFieldsScreen::class)->name('platform.example.fields');
 Route::screen('example-layouts', ExampleLayoutsScreen::class)->name('platform.example.layouts');
