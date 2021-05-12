@@ -17,6 +17,9 @@ use App\Orchid\Screens\User\UserListScreen;
 use App\Orchid\Screens\User\UserProfileScreen;
 use App\Orchid\Screens\ProjectEditScreen;
 use App\Orchid\Screens\ProjectListScreen;
+use App\Orchid\Screens\ScheduleEditScreen;
+use App\Orchid\Screens\ScheduleListScreen;
+
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
 
@@ -117,3 +120,11 @@ Route::screen('project/{project?}', ProjectEditScreen::class)
 
 Route::screen('projects', ProjectListScreen::class)
     ->name('platform.project.list');
+
+//Screens for schedules
+
+Route::screen('schedule/{schedule?}', ScheduleEditScreen::class)
+    ->name('platform.schedule.edit');
+    
+Route::screen('schedules', ScheduleListScreen::class)
+    ->name('platform.schedule.list');
