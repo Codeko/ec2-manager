@@ -21,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
 use App\Orchid\Screens\MachineEditScreen;
 use App\Orchid\Screens\MachineListScreen;
+use App\Orchid\Screens\MachineSharedUrlEditScreen;
+use App\Orchid\Screens\MachineSharedUrlListScreen;
 
 
 /*
@@ -128,3 +130,11 @@ Route::screen('project/{project?}', ProjectEditScreen::class)
 
 Route::screen('projects', ProjectListScreen::class)
     ->name('platform.project.list');
+
+
+Route::screen('machinesharedurl/{machinesharedurl?}', MachineSharedUrlEditScreen::class)
+->name('platform.machinesharedurl.edit');
+
+
+Route::screen('machinesharedurls', MachineSharedUrlListScreen::class)
+->name('platform.machinesharedurl.list');
