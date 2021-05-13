@@ -19,6 +19,12 @@ use App\Orchid\Screens\ProjectEditScreen;
 use App\Orchid\Screens\ProjectListScreen;
 use App\Orchid\Screens\ScheduleEditScreen;
 use App\Orchid\Screens\ScheduleListScreen;
+use App\Orchid\Screens\MachineEditScreen;
+use App\Orchid\Screens\MachineListScreen;
+use App\Orchid\Screens\IdentityEditScreen;
+use App\Orchid\Screens\IdentityListScreen;
+use App\Orchid\Screens\MachineSharedUrlEditScreen;
+use App\Orchid\Screens\MachineSharedUrlListScreen;
 
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
@@ -122,9 +128,31 @@ Route::screen('projects', ProjectListScreen::class)
     ->name('platform.project.list');
 
 //Screens for schedules
-
 Route::screen('schedule/{schedule?}', ScheduleEditScreen::class)
     ->name('platform.schedule.edit');
     
 Route::screen('schedules', ScheduleListScreen::class)
     ->name('platform.schedule.list');
+
+//Platform > Machine > Edit
+Route::screen('machine/{machine?}', MachineEditScreen::class)
+    ->name('platform.machine.edit');
+
+//Platform > Machine > List
+Route::screen('machines', MachineListScreen::class)
+    ->name('platform.machine.list');
+
+//Platform > MachineSharedUrl > Edit
+Route::screen('machinesharedurl/{machinesharedurl?}', MachineSharedUrlEditScreen::class)
+->name('platform.machinesharedurl.edit');
+
+//Platform > MachineSharedUrl > List
+Route::screen('machinesharedurls', MachineSharedUrlListScreen::class)
+->name('platform.machinesharedurl.list');
+
+//Screens for identities
+Route::screen('identity/{identity?}', IdentityEditScreen::class)
+    ->name('platform.identity.edit');
+    
+Route::screen('identities', IdentityListScreen::class)
+    ->name('platform.identity.list');
