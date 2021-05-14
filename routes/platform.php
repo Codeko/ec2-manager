@@ -22,6 +22,11 @@ use App\Orchid\Screens\ScheduleListScreen;
 
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
+use App\Orchid\Screens\MachineEditScreen;
+use App\Orchid\Screens\MachineListScreen;
+use App\Orchid\Screens\MachineSharedUrlEditScreen;
+use App\Orchid\Screens\MachineSharedUrlListScreen;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -105,6 +110,14 @@ Route::screen('example', ExampleScreen::class)
             ->push(__('Example screen'));
     });
 
+//Platform > Machine > Edit
+Route::screen('machine/{machine?}', MachineEditScreen::class)
+    ->name('platform.machine.edit');
+
+//Platform > Machine > List
+Route::screen('machines', MachineListScreen::class)
+    ->name('platform.machine.list');
+
 Route::screen('example-fields', ExampleFieldsScreen::class)->name('platform.example.fields');
 Route::screen('example-layouts', ExampleLayoutsScreen::class)->name('platform.example.layouts');
 Route::screen('example-charts', ExampleChartsScreen::class)->name('platform.example.charts');
@@ -128,3 +141,10 @@ Route::screen('schedule/{schedule?}', ScheduleEditScreen::class)
     
 Route::screen('schedules', ScheduleListScreen::class)
     ->name('platform.schedule.list');
+
+Route::screen('machinesharedurl/{machinesharedurl?}', MachineSharedUrlEditScreen::class)
+->name('platform.machinesharedurl.edit');
+
+
+Route::screen('machinesharedurls', MachineSharedUrlListScreen::class)
+->name('platform.machinesharedurl.list');

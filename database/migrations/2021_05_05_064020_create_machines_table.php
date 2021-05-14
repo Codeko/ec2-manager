@@ -4,27 +4,31 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOrchidRolesTable extends Migration
+class CreateMachinesTable extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('slug')->unique();
+        Schema::create('machines', function (Blueprint $table) {
+            $table->id();
             $table->string('name');
-            $table->jsonb('permissions')->nullable();
+            $table->string('ip');
+            $table->text('urls');
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('machines');
     }
 }
