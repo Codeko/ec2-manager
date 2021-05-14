@@ -1,3 +1,5 @@
+
+
 <?php $__env->startSection('body-left'); ?>
 
     <div class="aside col-xs-12 col-md-2 bg-dark">

@@ -17,7 +17,9 @@ class Machine extends Model
         'name',
         'ip',
         'urls',
-        'idProject'
+        'idProject',
+        'idSchedule',
+        'idIdentity'
         
     ];
 }

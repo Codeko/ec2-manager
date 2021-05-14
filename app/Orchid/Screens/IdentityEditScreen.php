@@ -3,7 +3,7 @@
 namespace App\Orchid\Screens;
 
 use App\Models\Identity;
-use App\Models\User;
+use App\Models\Machine;
 use Illuminate\Http\Request;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Quill;
@@ -91,6 +91,10 @@ class IdentityEditScreen extends Screen
                     ->title('Password')
                     ->placeholder('Attractive but mysterious password')
                     ->help('Specify a secure password for this identity.'),
+
+                Relation::make('identity.idMachine')
+                    ->title('Id Machine')
+                    ->fromModel(Machine::class, 'id'), 
             ])
         ];
     }

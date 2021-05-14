@@ -3,7 +3,7 @@
 namespace App\Orchid\Screens;
 
 use App\Models\Schedule;
-use App\Models\User;
+use App\Models\Machine;
 use Illuminate\Http\Request;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Quill;
@@ -99,7 +99,11 @@ class ScheduleEditScreen extends Screen
                         'restart' => 'Restart'
                     ])
                     ->title('Select the state of the schedule')
-                    ->help('Allow search bots to index')
+                    ->help('Allow search bots to index'),
+
+                Relation::make('schedule.idMachine')
+                    ->title('Id Machine')
+                    ->fromModel(Machine::class, 'id'), 
             ])
         ];
     }

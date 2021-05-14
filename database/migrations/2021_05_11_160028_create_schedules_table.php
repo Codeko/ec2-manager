@@ -18,6 +18,7 @@ class CreateSchedulesTable extends Migration
             $table->string('name');
             $table->string('cron');
             $table->enum("state", ["On", "Off", "Restart"]);
+            $table->bigInteger('idMachine');
             $table->timestamps();
         });
     }
