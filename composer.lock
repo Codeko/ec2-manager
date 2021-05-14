@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+    "content-hash": "1679fd23f8b98018f33780bab1326506",
     "content-hash": "b93f5ccaf407ad4f830020d97d31a8e4",
     "packages": [
         {
@@ -1026,6 +1027,34 @@
         },
         {
             "name": "laravel/scout",
+            "version": "v8.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/scout.git",
+                "reference": "7fb1c860a2fd904f0e084a7cc3641eb1448ba278"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/scout/zipball/7fb1c860a2fd904f0e084a7cc3641eb1448ba278",
+                "reference": "7fb1c860a2fd904f0e084a7cc3641eb1448ba278",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/bus": "^6.0|^7.0|^8.0",
+                "illuminate/contracts": "^6.0|^7.0|^8.0",
+                "illuminate/database": "^6.0|^7.0|^8.0",
+                "illuminate/http": "^6.0|^7.0|^8.0",
+                "illuminate/pagination": "^6.0|^7.0|^8.0",
+                "illuminate/queue": "^6.0|^7.0|^8.0",
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^8.0|^9.3"
+            },
+            "suggest": {
+                "algolia/algoliasearch-client-php": "Required to use the Algolia engine (^2.2)."
             "version": "v9.0.0",
             "source": {
                 "type": "git",
@@ -1061,6 +1090,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+                    "dev-master": "8.x-dev"
                     "dev-master": "9.x-dev"
                 },
                 "laravel": {
@@ -1094,6 +1124,7 @@
                 "issues": "https://github.com/laravel/scout/issues",
                 "source": "https://github.com/laravel/scout"
             },
+            "time": "2021-04-06T14:35:41+00:00"
             "time": "2021-04-27T18:32:11+00:00"
         },
         {
@@ -1845,6 +1876,69 @@
             "time": "2021-04-20T11:02:59+00:00"
         },
         {
+            "name": "orchid/crud",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orchidsoftware/crud.git",
+                "reference": "ae8c6615c48b4e5b0afd537b62f73cc03aa2b8f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orchidsoftware/crud/zipball/ae8c6615c48b4e5b0afd537b62f73cc03aa2b8f9",
+                "reference": "ae8c6615c48b4e5b0afd537b62f73cc03aa2b8f9",
+                "shasum": ""
+            },
+            "require": {
+                "orchid/platform": "^10.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Orchid\\Crud\\CrudServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Orchid\\Crud\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandr Chernyaev",
+                    "email": "bliz48rus@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Build CRUD apps in fewer lines of code for Laravel Orchid.",
+            "homepage": "https://github.com/orchid/crud",
+            "keywords": [
+                "crud",
+                "orchid"
+            ],
+            "support": {
+                "issues": "https://github.com/orchidsoftware/crud/issues",
+                "source": "https://github.com/orchidsoftware/crud/tree/3.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/orchid",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2021-04-14T10:37:58+00:00"
+        },
+        {
             "name": "orchid/icons",
             "version": "2.2.0",
             "source": {
@@ -1892,6 +1986,16 @@
         },
         {
             "name": "orchid/platform",
+            "version": "10.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orchidsoftware/platform.git",
+                "reference": "fec4a00b18eeda841c2912b6a84b62b9621889a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orchidsoftware/platform/zipball/fec4a00b18eeda841c2912b6a84b62b9621889a3",
+                "reference": "fec4a00b18eeda841c2912b6a84b62b9621889a3",
             "version": "10.2.1",
             "source": {
                 "type": "git",
@@ -1907,6 +2011,7 @@
             "require": {
                 "ext-json": "*",
                 "laravel/framework": "^8.32",
+                "laravel/scout": "^8.5",
                 "laravel/scout": "^8.5|^9.0",
                 "myclabs/php-enum": "^1.7",
                 "orchid/blade-icons": "^1.2",
@@ -1993,6 +2098,7 @@
                     "type": "opencollective"
                 }
             ],
+            "time": "2021-04-24T00:19:02+00:00"
             "time": "2021-04-30T20:23:42+00:00"
         },
         {
