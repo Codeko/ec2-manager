@@ -3391,3 +3391,11 @@
 #71 C:\\xampp\\htdocs\\ec2-manager\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #72 {main}
 "} 
+[2021-05-14 10:50:47] local.ERROR: Cannot use App\Orchid\Screens\MachineEditScreen as MachineEditScreen because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot use App\\Orchid\\Screens\\MachineEditScreen as MachineEditScreen because the name is already in use at C:\\xampp\\htdocs\\ec2-manager\outes\\platform.php:31)
+[stacktrace]
+#0 {main}
+"} 
+[2021-05-14 10:51:07] local.ERROR: Cannot use App\Orchid\Screens\MachineEditScreen as MachineEditScreen because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot use App\\Orchid\\Screens\\MachineEditScreen as MachineEditScreen because the name is already in use at C:\\xampp\\htdocs\\ec2-manager\outes\\platform.php:31)
+[stacktrace]
+#0 {main}
+"} 
