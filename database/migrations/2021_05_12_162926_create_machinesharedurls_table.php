@@ -21,7 +21,7 @@ class CreateMachinesharedurlsTable extends Migration
             $table->longText('image');
             $table->longText('text');
             $table->string('url',50);
-            $table->bigInteger('id_machine');
+            $table->bigInteger('idMachine');
             $table->timestamps();
         });
     }
