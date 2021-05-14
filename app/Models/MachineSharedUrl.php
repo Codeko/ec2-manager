@@ -5,16 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Orchid\Screen\AsSource;
 
-class Project extends Model
+class MachineSharedUrl extends Model
 {
+    public $table = "machinesharedurls";
     use AsSource;
-    
+
     /**
      * @var array
      */
-     
     protected $fillable = [
-        'name',
+        'title',
+        'startDate',
+        'endDate',
+        'image',
+        'text',
+        'url',
         'idMachine'
     ];
 }

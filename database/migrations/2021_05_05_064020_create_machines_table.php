@@ -18,6 +18,7 @@ class CreateMachinesTable extends Migration
             $table->string('name');
             $table->string('ip');
             $table->text('urls');
+            $table->bigInteger('idProject');
             $table->timestamps();
         });
     }

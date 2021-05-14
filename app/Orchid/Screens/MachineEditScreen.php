@@ -4,6 +4,7 @@ namespace App\Orchid\Screens;
 
 use App\Models\Machine;
 use App\Models\User;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Quill;
@@ -76,7 +77,7 @@ class MachineEditScreen extends Screen
             Button::make('Remove')
                 ->icon('trash')
                 ->method('remove')
-                ->canSee($this->exists),
+                ->canSee($this->exists),   
         ];
     }
 
@@ -100,6 +101,10 @@ class MachineEditScreen extends Screen
 
                 Quill::make('machine.urls')
                     ->title('Urls'),
+
+                Relation::make('machine.idProject')
+                    ->title('Id Project')
+                    ->fromModel(Project::class, 'id'), 
 
             ])
         ];
