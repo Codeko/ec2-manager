@@ -112,7 +112,7 @@ class MachineSharedUrlEditScreen extends Screen
                 Input::make('machinesharedurl.url')
                     ->title('URL'),
 
-                Relation::make('machinesharedurl.id_machine')
+                Relation::make('machinesharedurl.idMachine')
                     ->title('Id machine')
                     ->fromModel(Machine::class, 'id'),
 

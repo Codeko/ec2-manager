@@ -3,7 +3,7 @@
 namespace App\Orchid\Screens;
 
 use App\Models\Project;
-use App\Models\User;
+use App\Models\Machine;
 use Illuminate\Http\Request;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Quill;
@@ -87,6 +87,10 @@ class ProjectEditScreen extends Screen
                     ->title('Name')
                     ->placeholder('Attractive but mysterious name')
                     ->help('Specify a short descriptive name for this project.'),
+                            
+                Relation::make('project.idMachine')
+                    ->title('Id machine')
+                    ->fromModel(Machine::class, 'id'),
             ])
         ];
     }

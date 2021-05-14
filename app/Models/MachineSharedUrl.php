@@ -20,6 +20,6 @@ class MachineSharedUrl extends Model
         'image',
         'text',
         'url',
-        'id_machine'
+        'idMachine'
     ];
 }
