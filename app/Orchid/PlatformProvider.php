@@ -26,71 +26,82 @@ class PlatformProvider extends OrchidServiceProvider
     public function registerMainMenu(): array
     {
         return [
-            Menu::make('Example screen')
-                ->icon('monitor')
-                ->route('platform.example')
-                ->title('Navigation')
-                ->badge(function () {
-                    return 6;
-                }),
-
-            Menu::make('Dropdown menu')
-                ->icon('code')
+            Menu::make('Machines')
+                ->icon('screen-desktop')
                 ->list([
-                    Menu::make('Sub element item 1')->icon('bag'),
-                    Menu::make('Sub element item 2')->icon('heart'),
+                    Menu::make('View all machines')
+                    ->icon('eye')
+                    ->route('platform.machine.list'),
+                    Menu::make('Create a new machine')
+                    ->icon('plus-alt')
+                    ->route('platform.machine.edit'),
+                ]),
+                
+            Menu::make('Projects')
+                ->icon('folder')
+                ->list([
+                    Menu::make('View all projects')
+                    ->icon('eye')
+                    ->route('platform.project.list'),
+                    Menu::make('Create a new project')
+                    ->icon('plus-alt')
+                    ->route('platform.project.edit'),
+                ]),
+                
+            Menu::make('Identities')
+                ->icon('bulb')
+                ->list([
+                    Menu::make('View all identities')
+                    ->icon('eye')
+                    ->route('platform.identity.list'),
+                    Menu::make('Create a new identity')
+                    ->icon('plus-alt')
+                    ->route('platform.identity.edit'),
+                ]),
+                
+            Menu::make('MachineSharedUrls')
+                ->icon('modules')
+                ->list([
+                    Menu::make('View all machinesharedurls')
+                    ->icon('eye')
+                    ->route('platform.machinesharedurl.list'),
+                    Menu::make('Create a new machinesharedurls')
+                    ->icon('plus-alt')
+                    ->route('platform.machinesharedurl.edit'),
+                ]),
+                
+            Menu::make('Users')
+                ->icon('user')
+                ->list([
+                    Menu::make('View all users')
+                    ->icon('eye')
+                    ->route('platform.systems.users'),
+                    Menu::make('Create a new user')
+                    ->icon('plus-alt')
+                    ->route('platform.systems.users.create'),
+                ]),
+                
+            Menu::make('Roles')
+                ->icon('lock')
+                ->list([
+                    Menu::make('View all roles')
+                    ->icon('eye')
+                    ->route('platform.systems.roles'),
+                    Menu::make('Create a new rol')
+                    ->icon('plus-alt')
+                    ->route('platform.systems.roles.create'),
                 ]),
 
-            Menu::make('Basic Elements')
-                ->title('Form controls')
-                ->icon('note')
-                ->route('platform.example.fields'),
+            // Menu::make(__('Users'))
+            //     ->icon('user')
+            //     ->route('platform.systems.users')
+            //     ->permission('platform.systems.users')
+            //     ->title(__('Access rights')),
 
-            Menu::make('Advanced Elements')
-                ->icon('briefcase')
-                ->route('platform.example.advanced'),
-
-            Menu::make('Text Editors')
-                ->icon('list')
-                ->route('platform.example.editors'),
-
-            Menu::make('Overview layouts')
-                ->title('Layouts')
-                ->icon('layers')
-                ->route('platform.example.layouts'),
-
-            Menu::make('Chart tools')
-                ->icon('bar-chart')
-                ->route('platform.example.charts'),
-
-            Menu::make('Cards')
-                ->icon('grid')
-                ->route('platform.example.cards')
-                ->divider(),
-
-            Menu::make('Documentation')
-                ->title('Docs')
-                ->icon('docs')
-                ->url('https://orchid.software/en/docs'),
-
-            Menu::make('Changelog')
-                ->icon('shuffle')
-                ->url('https://github.com/orchidsoftware/platform/blob/master/CHANGELOG.md')
-                ->target('_blank')
-                ->badge(function () {
-                    return Dashboard::version();
-                }, Color::DARK()),
-
-            Menu::make(__('Users'))
-                ->icon('user')
-                ->route('platform.systems.users')
-                ->permission('platform.systems.users')
-                ->title(__('Access rights')),
-
-            Menu::make(__('Roles'))
-                ->icon('lock')
-                ->route('platform.systems.roles')
-                ->permission('platform.systems.roles'),
+            // Menu::make(__('Roles'))
+            //     ->icon('lock')
+            //     ->route('platform.systems.roles')
+            //     ->permission('platform.systems.roles'),
         ];
     }
 

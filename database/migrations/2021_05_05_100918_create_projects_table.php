@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->bigInteger('idMachine');
+            $table->bigInteger('idUser');
             $table->timestamps();
         });
     }
