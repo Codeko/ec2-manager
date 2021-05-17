@@ -17,6 +17,7 @@ class CreateIdentitiesTable extends Migration
             $table->bigincrements('id');
             $table->string('username');
             $table->string('password');
+            $table->bigInteger('idMachine');
             $table->timestamps();
         });
     }

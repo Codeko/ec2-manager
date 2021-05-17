@@ -3,7 +3,8 @@
 namespace App\Orchid\Screens;
 
 use App\Models\Machine;
-use App\Models\User;
+use App\Models\Identity;
+use App\Models\Schedule;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Orchid\Screen\Fields\Input;
@@ -106,6 +107,13 @@ class MachineEditScreen extends Screen
                     ->title('Id Project')
                     ->fromModel(Project::class, 'id'), 
 
+                Relation::make('machine.idSchedule')
+                    ->title('Id Schedule')
+                    ->fromModel(Schedule::class, 'id'), 
+
+                Relation::make('machine.idIdentity')
+                    ->title('Id Identity')
+                    ->fromModel(Identity::class, 'id'), 
             ])
         ];
     }

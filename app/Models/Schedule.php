@@ -16,6 +16,7 @@ class Schedule extends Model
     protected $fillable = [
         'name',
         'cron',
-        'state'
+        'state',
+        'idMachine'
     ];
 }
