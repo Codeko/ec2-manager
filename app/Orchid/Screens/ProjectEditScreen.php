@@ -4,6 +4,7 @@ namespace App\Orchid\Screens;
 
 use App\Models\Project;
 use App\Models\Machine;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Quill;
@@ -91,6 +92,10 @@ class ProjectEditScreen extends Screen
                 Relation::make('project.idMachine')
                     ->title('Id machine')
                     ->fromModel(Machine::class, 'id'),
+                    
+                Relation::make('user.idUser')
+                    ->title('Id User')
+                    ->fromModel(User::class, 'id'), 
             ])
         ];
     }
