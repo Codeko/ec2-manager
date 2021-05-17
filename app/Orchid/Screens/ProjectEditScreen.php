@@ -93,7 +93,7 @@ class ProjectEditScreen extends Screen
                     ->title('Id machine')
                     ->fromModel(Machine::class, 'id'),
                     
-                Relation::make('user.idUser')
+                Relation::make('project.idUser')
                     ->title('Id User')
                     ->fromModel(User::class, 'id'), 
             ])
