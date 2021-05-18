@@ -16,10 +16,10 @@ class CreateMachinesharedurlsTable extends Migration
         Schema::create('machinesharedurls', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->dateTime('startDate');
-            $table->dateTime('endDate');
-            $table->longText('image');
-            $table->longText('text');
+            $table->dateTime('startDate')->nullable();
+            $table->dateTime('endDate')->nullable();
+            $table->longText('image')->nullable();
+            $table->longText('text')->nullable();
             $table->string('url',50);
             $table->bigInteger('idMachine');
             $table->timestamps();

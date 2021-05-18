@@ -14,14 +14,14 @@ class ScheduleListScreen extends Screen
      *
      * @var string
      */
-    public $name = 'Blog schedule';
+    public $name = 'All schedules';
 
     /**
      * Display header description.
      *
      * @var string|null
      */
-    public $description = 'All blog schedules';
+    // public $description = 'All blog schedules';
 
     /**
      * Query data.

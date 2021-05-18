@@ -15,7 +15,6 @@ class Identity extends Model
      
     protected $fillable = [
         'username',
-        'password',
-        'idMachine'
+        'password'
     ];
 }

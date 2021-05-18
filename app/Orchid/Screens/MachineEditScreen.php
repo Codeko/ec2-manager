@@ -31,7 +31,7 @@ class MachineEditScreen extends Screen
      *
      * @var string
      */
-    public $description = 'Blog machines';
+    // public $description = 'Blog machines';
 
     /**
      * @var bool
@@ -100,20 +100,13 @@ class MachineEditScreen extends Screen
                     ->title('Ip')
                     ->placeholder('Machine ip'),
 
-                Quill::make('machine.urls')
-                    ->title('Urls'),
+                Input::make('machine.urls')
+                    ->title('Urls')
+                    ->placeholder('Machine url'),
 
-                Relation::make('machine.idProject')
-                    ->title('Id Project')
-                    ->fromModel(Project::class, 'id'), 
-
-                Relation::make('machine.idSchedule')
-                    ->title('Id Schedule')
-                    ->fromModel(Schedule::class, 'id'), 
-
-                Relation::make('machine.idIdentity')
-                    ->title('Id Identity')
-                    ->fromModel(Identity::class, 'id'), 
+                Relation::make('machine.nameProject')
+                    ->title('Name Project')
+                    ->fromModel(Project::class, 'name'), 
             ])
         ];
     }

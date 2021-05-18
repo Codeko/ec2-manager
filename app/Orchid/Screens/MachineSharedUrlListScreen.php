@@ -14,14 +14,14 @@ class MachineSharedUrlListScreen extends Screen
      *
      * @var string
      */
-    public $name = 'Blog Machine Shared Url';
+    public $name = 'All Machine Shared Url';
 
     /**
      * Display header description.
      *
      * @var string
      */
-    public $description = 'All blog Machine Shared Urls';
+    // public $description = 'All blog Machine Shared Urls';
 
     /**
      * Query data.

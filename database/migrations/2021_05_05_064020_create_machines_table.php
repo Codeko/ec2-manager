@@ -17,10 +17,8 @@ class CreateMachinesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('ip');
-            $table->text('urls');
-            $table->bigInteger('idProject');
-            $table->bigInteger('idSchedule');
-            $table->bigInteger('idIdentity');
+            $table->string('urls');
+            $table->string('nameProject');
             $table->timestamps();
         });
     }

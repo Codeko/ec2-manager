@@ -48,6 +48,17 @@ class PlatformProvider extends OrchidServiceProvider
                     ->route('platform.project.edit'),
                 ]),
                 
+            Menu::make('Schedules')
+                ->icon('android')
+                ->list([
+                    Menu::make('View all schedules')
+                    ->icon('eye')
+                    ->route('platform.schedule.list'),
+                    Menu::make('Create a new schedule')
+                    ->icon('plus-alt')
+                    ->route('platform.schedule.edit'),
+                ]),
+                
             Menu::make('Identities')
                 ->icon('bulb')
                 ->list([
@@ -59,13 +70,13 @@ class PlatformProvider extends OrchidServiceProvider
                     ->route('platform.identity.edit'),
                 ]),
                 
-            Menu::make('MachineSharedUrls')
+            Menu::make('Machine Shared Urls')
                 ->icon('modules')
                 ->list([
-                    Menu::make('View all machinesharedurls')
+                    Menu::make('View all machine shared urls')
                     ->icon('eye')
                     ->route('platform.machinesharedurl.list'),
-                    Menu::make('Create a new machinesharedurls')
+                    Menu::make('Create a new machine shared urls')
                     ->icon('plus-alt')
                     ->route('platform.machinesharedurl.edit'),
                 ]),
@@ -91,17 +102,6 @@ class PlatformProvider extends OrchidServiceProvider
                     ->icon('plus-alt')
                     ->route('platform.systems.roles.create'),
                 ]),
-
-            // Menu::make(__('Users'))
-            //     ->icon('user')
-            //     ->route('platform.systems.users')
-            //     ->permission('platform.systems.users')
-            //     ->title(__('Access rights')),
-
-            // Menu::make(__('Roles'))
-            //     ->icon('lock')
-            //     ->route('platform.systems.roles')
-            //     ->permission('platform.systems.roles'),
         ];
     }
 
