@@ -166,10 +166,3 @@ Route::screen('identity/{identity?}', IdentityEditScreen::class)
     
 Route::screen('identities', IdentityListScreen::class)
     ->name('platform.identity.list');
-
-Route::screen('machinesharedurl/{machinesharedurl?}', MachineSharedUrlEditScreen::class)
-->name('platform.machinesharedurl.edit');
-
-
-Route::screen('machinesharedurls', MachineSharedUrlListScreen::class)
-->name('platform.machinesharedurl.list');
