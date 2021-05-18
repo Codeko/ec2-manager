@@ -14,14 +14,14 @@ class IdentityListScreen extends Screen
      *
      * @var string
      */
-    public $name = 'Blog identity';
+    public $name = 'All identities';
 
     /**
      * Display header description.
      *
      * @var string|null
      */
-    public $description = 'All blog identities';
+    // public $description = 'All blog identities';
 
     /**
      * Query data.

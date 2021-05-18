@@ -3,7 +3,7 @@
 namespace App\Orchid\Screens;
 
 use App\Models\Schedule;
-use App\Models\Machine;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Quill;
@@ -30,7 +30,7 @@ class ScheduleEditScreen extends Screen
      *
      * @var string|null
      */
-    public $description = 'Blog schedules';
+    // public $description = 'Blog schedules';
 
     /**
      * Query data.
@@ -99,11 +99,7 @@ class ScheduleEditScreen extends Screen
                         'restart' => 'Restart'
                     ])
                     ->title('Select the state of the schedule')
-                    ->help('Allow search bots to index'),
-
-                Relation::make('schedule.idMachine')
-                    ->title('Id Machine')
-                    ->fromModel(Machine::class, 'id'), 
+                    ->help('Allow search bots to index')
             ])
         ];
     }

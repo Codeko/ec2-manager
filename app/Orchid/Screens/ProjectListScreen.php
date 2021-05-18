@@ -15,14 +15,14 @@ class ProjectListScreen extends Screen
      *
      * @var string
      */
-    public $name = 'Blog project';
+    public $name = 'All projects';
 
     /**
      * Display header description.
      *
      * @var string|null
      */
-    public $description = 'All blog projects';
+    // public $description = 'All blog projects';
 
     /**
      * Query data.

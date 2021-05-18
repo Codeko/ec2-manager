@@ -30,7 +30,7 @@ class MachineSharedUrlEditScreen extends Screen
      *
      * @var string
      */
-    public $description = 'blog Machine Shared Urls';
+    // public $description = 'blog Machine Shared Urls';
 
     /**
      * @var bool

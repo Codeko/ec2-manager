@@ -145,7 +145,6 @@ class UserEditScreen extends Screen
                         ->canSee($this->user->exists)
                         ->method('save')
                 ),
-
         ];
     }
 

@@ -15,14 +15,14 @@ class MachineListScreen extends Screen
      *
      * @var string
      */
-    public $name = 'Blog machine';
+    public $name = 'All machines';
 
     /**
      * Display header description.
      *
      * @var string
      */
-    public $description = 'All blog machines';
+    // public $description = 'All  machines';
 
     /**
      * Query data.

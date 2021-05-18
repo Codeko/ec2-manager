@@ -30,7 +30,7 @@ class ProjectEditScreen extends Screen
      *
      * @var string|null
      */
-    public $description = 'Blog projects';
+    // public $description = 'Blog projects';
 
     /**
      * Query data.
@@ -88,10 +88,6 @@ class ProjectEditScreen extends Screen
                     ->title('Name')
                     ->placeholder('Attractive but mysterious name')
                     ->help('Specify a short descriptive name for this project.'),
-                            
-                Relation::make('project.idMachine')
-                    ->title('Id machine')
-                    ->fromModel(Machine::class, 'id'),
                     
                 Relation::make('project.idUser')
                     ->title('Id User')
