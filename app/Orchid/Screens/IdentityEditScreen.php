@@ -83,6 +83,10 @@ class IdentityEditScreen extends Screen
     {
         return [
             Layout::rows([
+                Input::make('identity.name')
+                    ->title('Name')
+                    ->placeholder('Identity name'),
+
                 Input::make('identity.username')
                     ->title('Username')
                     ->placeholder('Attractive but mysterious username')

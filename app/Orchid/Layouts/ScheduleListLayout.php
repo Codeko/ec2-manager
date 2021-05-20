@@ -32,6 +32,11 @@ class ScheduleListLayout extends Table
                 return Link::make($schedule->name)
                     ->route('platform.schedule.edit', $schedule);
             }),
+            TD::make('cron', 'Cron')
+            ->render(function (Schedule $schedule) {
+                return Link::make($schedule->cron)
+                    ->route('platform.schedule.edit', $schedule);
+            }),
             TD::make('created_at', 'Created'),
             TD::make('updated_at', 'Updated'),
         ];

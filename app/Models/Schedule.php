@@ -18,4 +18,8 @@ class Schedule extends Model
         'cron',
         'state'
     ];
+        protected $casts = [
+        'created_at' => 'datetime:Y-m-d' ,
+        'updated_at' => 'datetime:Y-m-d' 
+    ];
 }

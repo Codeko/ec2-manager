@@ -19,6 +19,7 @@ class CreateMachinesTable extends Migration
             $table->string('ip');
             $table->string('urls');
             $table->string('nameProject');
+            $table->string('nameIdentity');
             $table->timestamps();
         });
     }

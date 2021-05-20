@@ -22,9 +22,9 @@ class IdentityListLayout extends Table
     public function columns(): array
     {
         return [
-            TD::make('username', 'Username')
+            TD::make('name', 'Name')
                 ->render(function (Identity $identity) {
-                    return Link::make($identity->username)
+                    return Link::make($identity->name)
                         ->route('platform.identity.edit', $identity);
                 }),
 
