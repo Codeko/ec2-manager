@@ -9,7 +9,7 @@ use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\DateTimer;
 use Orchid\Screen\Fields\TextArea;
 use Orchid\Screen\Fields\Relation;
-use Orchid\Screen\Fields\Picture;
+use Orchid\Screen\Fields\Cropper;
 use Orchid\Screen\Fields\Upload;
 use Orchid\Support\Facades\Layout;
 use Orchid\Screen\Actions\Button;
@@ -51,6 +51,8 @@ class MachineSharedUrlEditScreen extends Screen
         if($this->exists){
             $this->name = 'Edit machine shared url';
         }
+
+        $machinesharedurl->load('attachment');
 
         return [
             'machinesharedurl' => $machinesharedurl
@@ -103,8 +105,9 @@ class MachineSharedUrlEditScreen extends Screen
                     ->title('End date')
                     ->format('Y-m-d'),
 
-                Picture::make('machinesharedurl.image')
-                    ->title('Image'),
+                Cropper::make('machinesharedurl.image')
+                    ->title('Image')
+                    ->targetRelativeUrl(),
 
                 TextArea::make('machinesharedurl.text')
                     ->title('Text'),
@@ -129,6 +132,10 @@ class MachineSharedUrlEditScreen extends Screen
     public function createOrUpdate(MachineSharedUrl $machinesharedurl, Request $request)
     {
         $machinesharedurl->fill($request->get('machinesharedurl'))->save();
+
+        $machinesharedurl->attachment()->syncWithoutDetaching(
+            $request->input('machinesharedurl.attachment', [])
+        );
 
         Alert::info('You have successfully created an machine shared url.');
 

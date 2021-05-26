@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MachineSharedUrlController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/sharedurl', [MachineSharedUrlController::class, 'index']);
+//Route::get('/sharedurlshow', [MachineSharedUrlController::class, 'showSharedUrl']);
+Route::get('/{id}', [MachineSharedUrlController::class, 'show']);
+
