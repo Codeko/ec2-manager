@@ -7,6 +7,7 @@ use App\Models\Identity;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Screen;
 
+
 class IdentityListScreen extends Screen
 {
     /**
@@ -45,7 +46,7 @@ class IdentityListScreen extends Screen
         return [
             Link::make('Create new')
                 ->icon('pencil')
-                ->route('platform.identity.edit')
+                ->route('platform.identity.edit'),
         ];
     }
 

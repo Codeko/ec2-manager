@@ -102,11 +102,15 @@ class MachineEditScreen extends Screen
 
                 Input::make('machine.urls')
                     ->title('Urls')
-                    ->placeholder('Machine url'),
+                    ->placeholder('Url to access the machine'),
 
                 Relation::make('machine.nameProject')
                     ->title('Name Project')
-                    ->fromModel(Project::class, 'name'), 
+                    ->fromModel(Project::class, 'name'),
+                    
+                Relation::make('machine.nameIdentity')
+                    ->title('Name Identity')
+                    ->fromModel(Identity::class, 'name'),
             ])
         ];
     }

@@ -33,6 +33,12 @@ class MachineListLayout extends Table
                         ->route('platform.machine.edit', $machine);
                 }),
 
+            TD::make('ip', 'Ip')
+                ->render(function (Machine $machine) {
+                    return Link::make($machine->ip)
+                        ->route('platform.machine.edit', $machine);
+                }),
+
             TD::make('created_at', 'Created'),
             TD::make('updated_at', 'Last edit'),
         ];

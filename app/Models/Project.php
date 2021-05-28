@@ -15,7 +15,10 @@ class Project extends Model
      
     protected $fillable = [
         'name',
-        'idMachine',
         'idUser'
+    ];
+        protected $casts = [
+        'created_at' => 'datetime:Y-m-d' ,
+        'updated_at' => 'datetime:Y-m-d' 
     ];
 }

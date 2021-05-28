@@ -35,6 +35,13 @@ class PlatformProvider extends OrchidServiceProvider
                     Menu::make('Create a new machine')
                     ->icon('plus-alt')
                     ->route('platform.machine.edit'),
+
+                    Menu::make('View all machine shared urls')
+                        ->icon('modules')
+                        ->route('platform.machinesharedurl.list'),
+                    Menu::make('Create a new machine shared urls')
+                        ->icon('modules')
+                        ->route('platform.machinesharedurl.edit'),
                 ]),
                 
             Menu::make('Projects')
@@ -68,17 +75,6 @@ class PlatformProvider extends OrchidServiceProvider
                     Menu::make('Create a new identity')
                     ->icon('plus-alt')
                     ->route('platform.identity.edit'),
-                ]),
-                
-            Menu::make('Machine Shared Urls')
-                ->icon('modules')
-                ->list([
-                    Menu::make('View all machine shared urls')
-                    ->icon('eye')
-                    ->route('platform.machinesharedurl.list'),
-                    Menu::make('Create a new machine shared urls')
-                    ->icon('plus-alt')
-                    ->route('platform.machinesharedurl.edit'),
                 ]),
                 
             Menu::make('Users')

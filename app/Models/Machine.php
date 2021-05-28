@@ -8,6 +8,7 @@ use Orchid\Screen\AsSource;
 
 class Machine extends Model
 {
+    
     use AsSource;
 
     /**
@@ -17,7 +18,12 @@ class Machine extends Model
         'name',
         'ip',
         'urls',
-        'nameProject'
-        
+        'nameProject',
+        'nameIdentity',       
+    ];
+    
+        protected $casts = [
+        'created_at' => 'datetime:Y-m-d' ,
+        'updated_at' => 'datetime:Y-m-d' 
     ];
 }
