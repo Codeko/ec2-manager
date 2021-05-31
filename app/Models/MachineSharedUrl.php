@@ -24,8 +24,4 @@ class MachineSharedUrl extends Model
         'url',
         'idMachine'
     ];
-
-    public function pathAttachment(){
-        return 'images/machinesharedurls/'.$this->image;
-    }
 }
