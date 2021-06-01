@@ -1,9 +1,1 @@
 *.sqlite*
-*.log
-public/storage/**/*.jpg
-*.jpg
-*.png
-vendor
-cache
-sessions
-.env
