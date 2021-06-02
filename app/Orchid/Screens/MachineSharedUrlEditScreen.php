@@ -81,6 +81,22 @@ class MachineSharedUrlEditScreen extends Screen
                 ->canSee($this->exists),
         ];
     }
+    
+    /**
+     * 
+     * Function to generate random strings
+     * 
+     */
+    
+    function generateRandomString($length = 50) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
 
     /**
      * Views.
@@ -110,7 +126,7 @@ class MachineSharedUrlEditScreen extends Screen
                     ->title('Text'),
 
                 Input::make('machinesharedurl.url')
-                    ->title('URL'),
+                    ->title('URL')->value($this->generateRandomString()),
 
                 Relation::make('machinesharedurl.idMachine')
                     ->title('Id machine')
