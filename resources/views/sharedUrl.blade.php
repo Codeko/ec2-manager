@@ -8,20 +8,18 @@
 </head>
 <body>
     <section>
-    
+
         <div>
             <div>
-
+                
                 <ul>
-                    <li>Nombre: {{$sharedurl->title}}</li>
-                    <li>Texto: {{$sharedurl->text}}</li>
-                    @if ($sharedurl->image)
-                        <li>Imágen: <img src="{{$sharedurl->image}}" width="150" height="150"></li>
+                    <li>Nombre: {{$sharedUrls->title}}</li>
+                    <li>Texto: {{$sharedUrls->text}}</li>
+                    @if ($sharedUrls->image)
+                        <li>Imagen: <img src="{{$sharedUrls->image}}" width="150" height="150"></li>
                     @endif
-                    
                 </ul>
-
-      
+                
             </div>
         </div>
     </section>

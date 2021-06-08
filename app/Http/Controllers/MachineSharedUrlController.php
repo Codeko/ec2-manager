@@ -10,18 +10,15 @@ use Illuminate\Http\Request;
 class MachineSharedUrlController extends Controller
 {
     public function index(){
-
-        $sharedUrls = MachineSharedUrl::all();
-
-
-        return view('listado', ['sharedUrls'=>$sharedUrls]);
+        
+        return view('sharedUrl');
     }
 
-    public function show($id, Request $request)
+    public function show($url, Request $request)
     {
-        $sharedUrls = new MachineSharedUrl($request->all());
-        return view('sharedUrl', ['sharedurl' => MachineSharedUrl::findOrFail($id)]);
+        $sharedUrls= \DB::table('machinesharedurls')->select('url', 'title', 'text', 'image')->get();
+        return view('sharedUrl', compact('sharedUrls'));
     }
-    
+
 
 }

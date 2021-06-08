@@ -18,7 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/sharedurl', [MachineSharedUrlController::class, 'index']);
-//Route::get('/sharedurlshow', [MachineSharedUrlController::class, 'showSharedUrl']);
-Route::get('/{id}', [MachineSharedUrlController::class, 'show']);
-
+Route::get('/{url}',[MachineSharedUrlController::class, 'show']);
