@@ -9,10 +9,6 @@ use Illuminate\Http\Request;
 
 class MachineSharedUrlController extends Controller
 {
-    public function index(){
-        
-        return view('sharedUrl');
-    }
 
     public function show($url, Request $request)
     {
